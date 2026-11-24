@@ -5,8 +5,8 @@ compatibility_date = "2024-09-23"
 # 唯一必填：把下面的 database_id 换成你在 Cloudflare D1 控制台创建的库 ID
 [[d1_databases]]
 binding = "DB"
-database_name = "cf_kefu"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_name = "kefu0_db"
+database_id = "5eeba1e9-11bc-491e-a7fe-a682bdf1b846D"
 
 # 静态页面（访客页/客服页/资源）由 assets 提供
 [assets]
@@ -16,4 +16,4 @@ binding = "ASSETS"
 # R2 为可选：图片无 R2 时自动落 D1，无需配置
 # [[r2_buckets]]
 # binding = "BUCKET"
-# bucket_name = "kefu-assets"
+# bucket_name = "kefu0-files"
