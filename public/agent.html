@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>客服工作台</title>
+<link rel="stylesheet" href="/assets/app.css">
+</head>
+<body data-role="agent">
+
+<!-- 登录 -->
+<div id="login-screen">
+  <h2>客服工作台登录</h2>
+  <input type="text" id="login-name" placeholder="客服名称（首次登录可填）" autocomplete="off">
+  <input type="password" id="login-password" placeholder="登录口令" autocomplete="off">
+  <button class="btn-primary" id="login-btn" type="button">登录</button>
+  <p class="hint" style="margin-top:12px">首次登录输入的口令将直接设为系统口令，请牢记。</p>
+</div>
+
+<!-- 控制台 -->
+<div id="app" class="agent" style="display:none">
+  <aside class="sidebar">
+    <div class="sidebar-head"><strong>会话列表</strong><span id="conv-count" class="hint"></span></div>
+    <div id="conv-list"></div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div class="t-title" id="chat-title">选择会话</div>
+      <div class="t-btns" id="topbar-btns"></div>
+    </div>
+    <div id="chat-main"><div id="messages"></div></div>
+    <div class="a-inputbar">
+      <input type="text" id="a-input" placeholder="输入回复内容…" maxlength="2000" autocomplete="off">
+      <button class="btn-send" id="a-send" type="button">发送</button>
+    </div>
+  </main>
+</div>
+
+<!-- 设置弹窗 -->
+<div class="modal-mask" id="settings-modal">
+  <div class="modal">
+    <h3>系统设置</h3>
+    <div class="field"><label>店铺名称</label><input type="text" id="set-shop"></div>
+    <div class="field"><label>客服名称</label><input type="text" id="set-agentname"></div>
+    <div class="field"><label>结束对话文案（访客端显示）</label><textarea id="set-endmsg"></textarea></div>
+    <div class="field switch"><input type="checkbox" id="set-reopenable"><label for="set-reopenable" style="margin:0">结束后允许访客重新发起对话</label></div>
+
+    <hr style="margin:18px 0;border:none;border-top:1px solid var(--line)">
+    <h3 style="margin-bottom:10px">AI 托管智能回复</h3>
+    <div class="field switch"><input type="checkbox" id="ai-enabled"><label for="ai-enabled" style="margin:0">启用 AI 自动回复（失败/超时静默回退人工）</label></div>
+    <div class="field"><label>API 地址（OpenAI 兼容 /chat/completions）</label><input type="text" id="ai-base" placeholder="https://api.deepseek.com/chat/completions"></div>
+    <div class="field"><label>API Key（仅保存在本站，不下发给访客）</label><input type="password" id="ai-key" placeholder="sk-..."></div>
+    <div class="row2">
+      <div class="field"><label>模型名</label><input type="text" id="ai-model" placeholder="deepseek-chat"></div>
+      <div class="field"><label>上下文轮数（1-20）</label><input type="text" id="ai-rounds" placeholder="6"></div>
+    </div>
+    <div class="field"><label>系统提示词</label><textarea id="ai-prompt"></textarea></div>
+    <div class="field">
+      <button class="btn-ghost" id="ai-test-btn" type="button">测试回复（发一句"你好"）</button>
+      <div class="ai-test-out" id="ai-test-out"></div>
+    </div>
+
+    <div class="m-actions">
+      <button class="btn-primary" id="save-settings" type="button">保存设置</button>
+      <button class="btn-ghost" id="close-settings" type="button">取消</button>
+    </div>
+  </div>
+</div>
+
+<!-- 视频/语音链接面板 -->
+<div class="modal-mask" id="link-modal">
+  <div class="modal link-panel">
+    <h3>视频 / 语音会议链接（外部入口）</h3>
+    <p class="hint">本功能为外部会议链接入口（腾讯会议 / 微信视频号 / 电话 / 二维码链接任选），非平台内视频通话；免费 Workers 无法承载 WebRTC。</p>
+    <div class="field"><label>标题</label><input type="text" id="link-title" placeholder="例如：腾讯会议一对一咨询" maxlength="60"></div>
+    <div class="field"><label>链接地址（http:// 或 https://）</label><input type="text" id="link-url" placeholder="https://meeting.tencent.com/..."></div>
+    <div class="m-actions">
+      <button class="btn-primary" id="send-link-btn" type="button">发送给访客</button>
+      <button class="btn-ghost" id="close-link" type="button">取消</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/chat.js"></script>
+</body>
+</html>

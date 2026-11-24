@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>在线客服</title>
+<link rel="stylesheet" href="/assets/app.css">
+</head>
+<body data-role="visitor">
+<div id="chat-app" class="visitor">
+  <div class="v-header">
+    <div class="avatar-sm">客</div>
+    <div><div class="v-title" id="v-title">在线客服</div><div class="v-sub">工作时间内一般几分钟内回复</div></div>
+  </div>
+  <div id="messages"><div class="empty-tip">正在连接…</div></div>
+  <div class="closed-banner" id="closed-banner"></div>
+  <div class="v-inputbar">
+    <input type="text" id="msg-input" placeholder="请输入您的问题…" maxlength="2000" autocomplete="off">
+    <button class="btn-send" id="send-btn" type="button">发送</button>
+  </div>
+</div>
+<script src="/assets/chat.js"></script>
+</body>
+</html>
