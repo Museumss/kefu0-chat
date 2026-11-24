@@ -14,6 +14,6 @@ directory = "./public"
 binding = "ASSETS"
 
 # R2 为可选：图片无 R2 时自动落 D1，无需配置
-# [[r2_buckets]]
-# binding = "BUCKET"
-# bucket_name = "kefu0-files"
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "kefu0-files"
