@@ -7,7 +7,7 @@
 
   <p>
     <a href="https://github.com/你的GitHub用户名/cf-kefu-chat/stargazers"><img src="https://img.shields.io/github/stars/你的GitHub用户名/cf-kefu-chat?style=social" alt="Stars"></a>
-    <img src="https://img.shields.io/badge/license-MIT-3da639" alt="License">
+    <img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License">
     <img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
     <img src="https://img.shields.io/badge/数据库-D1-003B57?logo=sqlite&logoColor=white" alt="D1">
     <img src="https://img.shields.io/badge/对象存储-R2-12b8c8" alt="R2">
@@ -137,7 +137,11 @@ D1 控制台执行 `DELETE FROM settings WHERE key='passcode_hash'; DELETE FROM 
 
 ## 📄 License
 
-[MIT](./LICENSE) © 你的名字
+[Apache-2.0](./LICENSE) © 你的名字
+
+- 允许商用、修改、闭源分发，并可获得贡献者的明确**专利授权**；不授予商标使用权。
+- 分发时请随附 `LICENSE` 与 `NOTICE`（二进制/安装包同理，别只把许可塞在压缩包里）。
+- 修改了本项目自带文件时，请在改动文件里标明“已修改”。
 
 <div align="center">
   <sub>Made with Cloudflare Workers · 如果好用，记得点个 Star ⭐</sub>

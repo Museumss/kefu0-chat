@@ -82,7 +82,7 @@
 
 ### 4.1 打开项目主页
 
-用浏览器打开项目仓库地址 `https://github.com/xqdjwz/kefu01-chat`
+用浏览器打开项目仓库地址（作者发给你的那个链接，形如 `https://github.com/作者名/cf-kefu-chat`）。
 
 ### 4.2 点 Star ⭐
 
