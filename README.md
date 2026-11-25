@@ -127,3 +127,11 @@ v3.4 的「结束语 / 同 IP 复用会话 / 历史会话合并」在本地用 S
 - 完整版本记录见仓库根目录 [`CHANGELOG.md`](../CHANGELOG.md)
 - 升级步骤见 [`升级说明.md`](../升级说明.md)
 - 判断线上版本：`GET /api/health`，看 `version` 是否为 `v3.4-2026-11-25`
+
+## 赞助与支持
+- 如果这套系统为您的店铺经营或日常工作带来了实际帮助，欢迎通过下方二维码自愿赞赏，
+- 感谢您的信任与支持，祝您客源广进、生意兴隆。
+- English: This project is developed and maintained independently and released free of charge, with no feature limits and no paid tier. If it is useful to you, a voluntary contribution is welcome and helps cover hosting and maintenance costs. A contribution is not a purchase of services or a license and creates no service obligation; no invoices, custom development or priority support are provided.
+- <img width="738" height="839" alt="图片_20260422112858_1816_2" src="https://github.com/user-attachments/assets/cfa11bcf-0684-4d05-84dc-67377df34626" />
+- 
+
