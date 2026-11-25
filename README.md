@@ -100,7 +100,7 @@
 2. 一个 GitHub 账号（免费）
 3. 电脑浏览器（Chrome / Edge 都行）
 4. 没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
-5. 开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
+5. 推荐开通R2，不开通也能部署，这里获取 https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
 
 D1 数据库、Workers 都在免费额度里，不用买服务器、不用买数据库。
 
@@ -279,7 +279,9 @@ IP 定位本身只到城市，访客用 VPN / 代理 / 苹果隐私中继时会�
 ```
 
 右下角会出现悬浮客服按钮，点开就是聊天窗；也可以用 直接嵌。
-`<iframe src="https://你的worker域名/" style="width:100%;height:640px;border:0"></iframe>` 
+```html
+<iframe src="https://你的worker域名/" style="width:100%;height:640px;border:0"></iframe>
+```
 
 **Q：导出的聊天记录是什么格式？**
 CSV（Excel / WPS / 手机表格都能直接打开，中文不乱码）。会话标题栏右边「导出」按钮对应单个会话；图片消息导出的是图片链接。
