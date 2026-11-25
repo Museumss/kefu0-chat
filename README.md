@@ -59,15 +59,15 @@ cf-kefu-chat/
 ```
 
 ## 部署（Fork + Cloudflare，不需要任何命令行）
-> 没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
-> 开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
+- 没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
+- 开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
 
-- 准备；先去登陆自己GitHub账户，访问https://github.com/xqdjwz/kefu01-chat， 先点 **Star** ⭐，再点右上角 **Fork**，把仓库复制到你自己的 GitHub 账号下。后面的修改都在你的 fork 里做。
-1. **建 D1 数据库**：Cloudflare 控制台 → Storage & Databases → D1 SQL Database → Create database，名称 `cf_kefu`，创建后复制 `Database ID`。
-2. **（推荐）开通 R2**：R2 Object Storage → Enable R2（免费套餐）→ 创建存储桶 `cf-kefu-files`。
-3. **改你的 fork**：打开 `wrangler.toml`，把 `REPLACE_WITH_YOUR_D1_DATABASE_ID` 换成第 1 步的 ID；开了 R2 就把 `[[r2_buckets]]` 三行注释去掉。提交。
-4. **连自动部署**：Cloudflare 控制台 → Workers & Pages → Create → Workers → Import a repository → 选 **你自己名下的 fork**；构建命令 `npm install`，部署命令 `npx wrangler deploy` → 部署。
-5. 打开输出的 `https://cf-kefu-chat.xxx.workers.dev`（访客端），`/agent` 是客服端。**第一次登录时输入的口令会自动成为系统口令。**
+1. **登陆GitHub账户**，访问https://github.com/xqdjwz/kefu01-chat， 先点 **Star** ⭐，再点右上角 **Fork**，把仓库复制到你自己的 GitHub 账号下。后面的修改都在你的 fork 里做。
+2. **建 D1 数据库**：Cloudflare 控制台 → Storage & Databases → D1 SQL Database → Create database，名称 `cf_kefu`，创建后复制 `Database ID`。
+3. **（推荐）开通 R2**：R2 Object Storage → Enable R2（免费套餐）→ 创建存储桶 `cf-kefu-files`。
+4. **改你的 fork**：打开 `wrangler.toml`，把 `REPLACE_WITH_YOUR_D1_DATABASE_ID` 换成第 1 步的 ID；开了 R2 就把 `[[r2_buckets]]` 三行注释去掉。提交。
+5. **连自动部署**：Cloudflare 控制台 → Workers & Pages → Create → Workers → Import a repository → 选 **你自己名下的 fork**；构建命令 `npm install`，部署命令 `npx wrangler deploy` → 部署。
+6. 打开输出的 `https://cf-kefu-chat.xxx.workers.dev`（访客端），`/agent` 是客服端。**第一次登录时输入的口令会自动成为系统口令。**
 
 > 数据表由 Worker 首次请求时自动创建，不需要执行 `wrangler d1 migrations apply`。
 > 以后作者更新：在你的 fork 首页点 **Sync fork**（注意保留自己的 `database_id`）。
