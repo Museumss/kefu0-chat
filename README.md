@@ -134,6 +134,6 @@ v3.4 的「结束语 / 同 IP 复用会话 / 历史会话合并」在本地用 S
 - 如果这套系统为您的店铺经营或日常工作带来了实际帮助，欢迎通过下方二维码自愿赞赏，感谢您的信任与支持，祝您客源广进、生意兴隆。
 <img width="230" height="230" alt="图片_20260422112858_1816_2" src="https://github.com/user-attachments/assets/cfa11bcf-0684-4d05-84dc-67377df34626" />
 <img width="230" height="230" alt="alipay" src="https://github.com/user-attachments/assets/da181ba3-6416-4351-84f5-0fcf497002a0" />
-- English: This project is developed and maintained independently and released free of charge, with no feature limits and no paid tier. If it is useful to you, a voluntary contribution is welcome and helps cover hosting and maintenance costs. A contribution is not a purchase of services or a license and creates no service obligation; no invoices, custom development or priority support are provided.
+English: This project is developed and maintained independently and released free of charge, with no feature limits and no paid tier. If it is useful to you, a voluntary contribution is welcome and helps cover hosting and maintenance costs. A contribution is not a purchase of services or a license and creates no service obligation; no invoices, custom development or priority support are provided.
 
 
