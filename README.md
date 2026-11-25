@@ -59,8 +59,10 @@ cf-kefu-chat/
 ```
 
 ## 部署（Fork + Cloudflare，不需要任何命令行）
+没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
+开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
 
-先点 **Star** ⭐，再点右上角 **Fork**，把仓库复制到你自己的 GitHub 账号下。后面的修改都在你的 fork 里做。
+先去登陆自己GitHub账户，访问https://github.com/xqdjwz/kefu01-chat， 先点 **Star** ⭐，再点右上角 **Fork**，把仓库复制到你自己的 GitHub 账号下。后面的修改都在你的 fork 里做。
 
 1. **建 D1 数据库**：Cloudflare 控制台 → Storage & Databases → D1 SQL Database → Create database，名称 `cf_kefu`，创建后复制 `Database ID`。
 2. **（推荐）开通 R2**：R2 Object Storage → Enable R2（免费套餐）→ 创建存储桶 `cf-kefu-files`。
