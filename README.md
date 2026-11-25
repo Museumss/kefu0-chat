@@ -278,7 +278,9 @@ IP 定位本身只到城市，访客用 VPN / 代理 / 苹果隐私中继时会�
 <script src="https://你的worker域名/embed.js"></script>
 ```
 
-右下角会出现悬浮客服按钮，点开就是聊天窗；也可以用 直接嵌。
+右下角会出现悬浮客服按钮，点开就是聊天窗；
+
+也可以 直接嵌入网站。
 ```html
 <iframe src="https://你的worker域名/" style="width:100%;height:640px;border:0"></iframe>
 ```
