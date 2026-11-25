@@ -1,6 +1,9 @@
 # 在线客服聊天系统（Workers + D1）
 
-访客端和客服工作台在同一个域名下，纯 Cloudflare 免费额度就能跑：**Workers（计算）+ D1（数据库）+ 静态资源**。图片默认也存 D1，配置 R2 后自动改用 R2。
+访客端和客服工作台在同一个域名下，纯 Cloudflare 免费额度就能跑：**Workers（计算）+ D1（数据库）+ 静态资源**。图片默认存 D1，配置 R2 后自动改用 R2。
+
+> ⭐ 如果这个项目帮到你，点个 **Star** 支持一下；部署只需要 **Fork** 仓库，不用下载压缩包。
+> 完整步骤看 **[Cloudflare 部署完整教程（Fork 版）](./Cloudflare部署完整教程.md)**，含 D1、R2 开通、自动部署、常见报错。
 
 ![访客端](docs/preview-visitor.png)
 ![客服工作台](docs/preview-agent.png)
@@ -25,6 +28,8 @@
 - 设置面板：**接待状态（在线 / 离线）**、**新消息提示音**、**允许访客留联系方式**、**在线/离线两套关键词自动回复**、**微信推送（Server酱）**
 - 会话信息：**访客 IP / 归属地 / 来源网站 / 联系方式**（列表和会话顶部都显示）
 - **导出聊天记录**（单个会话导出 CSV，Excel 可直接打开）
+- **对话结束语**：点「结束对话」自动发收尾消息并标记结束，访客再发消息自动重新开始；可设沉默 N 分钟自动结束
+- **同一 IP 复用会话**：清缓存 / 换浏览器再进来接着原会话聊，不重复发欢迎语；支持一键合并历史重复会话
 - 窄屏自动切换「会话列表 → 聊天」单栏布局
 
 **访客端补充**
@@ -53,15 +58,19 @@ cf-kefu-chat/
 └── docs/                          # 预览截图
 ```
 
-## 部署（不需要任何命令行）
+## 部署（Fork + Cloudflare，不需要任何命令行）
+
+先点 **Star** ⭐，再点右上角 **Fork**，把仓库复制到你自己的 GitHub 账号下。后面的修改都在你的 fork 里做。
 
 1. **建 D1 数据库**：Cloudflare 控制台 → Storage & Databases → D1 SQL Database → Create database，名称 `cf_kefu`，创建后复制 `Database ID`。
-2. **传代码到 GitHub**：新建仓库，把本项目所有文件（保持目录结构）上传提交。
-3. **填 database_id**：在 GitHub 打开 `wrangler.toml`，把 `REPLACE_WITH_YOUR_D1_DATABASE_ID` 替换成第 1 步的 ID，提交。
-4. **连自动部署**：Cloudflare 控制台 → Workers & Pages → Create → Workers → Import a repository → 选这个仓库；构建命令 `npm install`，部署命令 `npx wrangler deploy` → 部署。
+2. **（推荐）开通 R2**：R2 Object Storage → Enable R2（免费套餐）→ 创建存储桶 `cf-kefu-files`。
+3. **改你的 fork**：打开 `wrangler.toml`，把 `REPLACE_WITH_YOUR_D1_DATABASE_ID` 换成第 1 步的 ID；开了 R2 就把 `[[r2_buckets]]` 三行注释去掉。提交。
+4. **连自动部署**：Cloudflare 控制台 → Workers & Pages → Create → Workers → Import a repository → 选 **你自己名下的 fork**；构建命令 `npm install`，部署命令 `npx wrangler deploy` → 部署。
 5. 打开输出的 `https://cf-kefu-chat.xxx.workers.dev`（访客端），`/agent` 是客服端。**第一次登录时输入的口令会自动成为系统口令。**
 
 > 数据表由 Worker 首次请求时自动创建，不需要执行 `wrangler d1 migrations apply`。
+> 以后作者更新：在你的 fork 首页点 **Sync fork**（注意保留自己的 `database_id`）。
+> 详细图文步骤、R2 开通问答、报错排查见 [Cloudflare 部署完整教程（Fork 版）](./Cloudflare部署完整教程.md)。
 
 ## 改配置
 
