@@ -61,8 +61,8 @@ Cloudflare部署完整教程.md
 | Cloudflare 账号 | 免费注册：`dash.cloudflare.com`，邮箱验证一下即可 |
 | 浏览器 | Chrome / Edge 都行 |
 | 一张能接收验证码的卡（仅 R2 可能需要） | 见第 6 节；**不想绑卡也能部署**，只是图片存 D1、单张限制更小 |
-| 没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
-| 开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
+| 没有GitHub的话 |  https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao |
+| 开通R2推荐海外卡绑定 | https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong |
 
 **不需要**：服务器、域名（可选）、Node.js、命令行、Docker、R2 API 密钥。
 
@@ -112,7 +112,7 @@ https://github.com/你的用户名/cf-kefu-chat
 
 > **确认一下**：页面左上角显示 `你的用户名 / cf-kefu-chat`，下面有一行小字 `forked from 作者名/cf-kefu-chat`。看到这行就说明 Fork 成功了。
 
-后面所有「改文件」的操作，都在**你自己这个 fork 仓库**里做，不要去原作者仓库改（你也没有权限）。
+后面所有「改文件」的操作，都在**你自己这个 fork 仓库**里做。
 
 ---
 
