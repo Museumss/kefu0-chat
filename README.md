@@ -36,7 +36,7 @@
 
 | 访客端 `/` | 客服工作台 `/agent` |
 | :---: | :---: |
-| ![访客端](docs/qiantai.png) | ![客服工作台](docs/houtai.png) |
+| ![访客端](docs/preview-visitor.png) | ![客服工作台](docs/preview-agent.png) |
 
 > 完整截图（含设置面板、备注弹窗、手机端）在 `预览/` 目录。
 
