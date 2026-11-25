@@ -1,4 +1,5 @@
-# 在线客服系统 · Cloudflare 免费部署完整教程（Fork 版）
+Cloudflare部署完整教程.md
+# 在线客服系统 · Cloudflare 免费部署完整教程
 
 > 适合：想给自己网站加一个「不用登录、能发图片、有后台」的在线客服。
 > 全程在浏览器里点，**不用装软件、不用命令行**，一台电脑 15～20 分钟能上线。
@@ -60,6 +61,8 @@
 | Cloudflare 账号 | 免费注册：`dash.cloudflare.com`，邮箱验证一下即可 |
 | 浏览器 | Chrome / Edge 都行 |
 | 一张能接收验证码的卡（仅 R2 可能需要） | 见第 6 节；**不想绑卡也能部署**，只是图片存 D1、单张限制更小 |
+| 没有GitHub的话，这里获取 https://shop.xqdj.site/product/github-du-xiang-cheng-pin-zhang-hao
+| 开通R2推荐海外卡绑定，这里获取，https://shop.xqdj.site/product/cloudflare-r2-cun-chu-tong-kai-tong
 
 **不需要**：服务器、域名（可选）、Node.js、命令行、Docker、R2 API 密钥。
 
@@ -82,7 +85,7 @@
 
 ### 4.1 打开项目主页
 
-用浏览器打开项目仓库地址（作者发给你的那个链接，形如 `https://github.com/作者名/cf-kefu-chat`）。
+用浏览器打开项目仓库地址 `https://github.com/xqdjwz/kefu01-chat`
 
 ### 4.2 点 Star ⭐
 
